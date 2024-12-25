@@ -5,7 +5,7 @@ from pymongo import MongoClient
 from bson.json_util import dumps  # Import dumps to convert MongoDB data to JSON
 
 # MongoDB connection setup
-client = MongoClient('mongodb+srv://atmostechnexa:Atmos#09@cluster0.su4ra6m.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')  # Connect to your MongoDB instance
+client = MongoClient('Mongodb_URI')  # Connect to your MongoDB instance
 db = client['mydatabase']  # Use your database name
 collection = db['userdata']  # Use your collection name
 
@@ -78,7 +78,7 @@ def error(update: Update, context: CallbackContext) -> None:
 # Main function to set up the Telegram bot
 def main() -> None:
     # Telegram bot token (replace with your actual token)
-    token = '7768243908:AAGV3gOdsSAv77avkSCamAvBmOCJrF5vhhM'
+    token = 'your_bot_token'
 
     # Set up the Updater and dispatcher
     updater = Updater(token)
