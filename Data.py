@@ -101,3 +101,13 @@ def main() -> None:
 
 if __name__ == '__main__':
     main()
+
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Accessing the environment variables
+token = os.getenv('TELEGRAM_BOT_TOKEN')
+mongo_uri = os.getenv('MONGO_URI')
